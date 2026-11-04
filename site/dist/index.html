@@ -1,0 +1,316 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>이기원 — 하이브리드 로켓 추진 연구</title>
+<meta name="description" content="이기원 (Giwon Lee) · 한국항공대학교 대학원 — 하이브리드 로켓 추진·연소 연구 포트폴리오">
+<style>
+:root{
+ --bg:#080b10;--bg2:#0d141d;--card:#111a25;--card2:#0f1722;
+ --ink:#e9eff6;--sub:#9db0c4;--faint:#67788c;
+ --line:rgba(255,255,255,.09);--line2:rgba(255,255,255,.055);
+ --accent:#35e0a1;--accent2:#4aa8ff;--warm:#ff9a3c;
+ --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+ font:16px/1.7 "Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,-apple-system,sans-serif;
+ -webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+/* nav */
+header.nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(10px);
+ background:rgba(8,11,16,.72);border-bottom:1px solid var(--line2)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.brand{font-weight:700;letter-spacing:.2px}
+.brand span{color:var(--accent)}
+.nav nav{display:flex;gap:20px;font-size:14.5px}
+.nav nav a{color:var(--sub)}.nav nav a:hover{color:var(--ink)}
+@media(max-width:640px){.nav nav{gap:14px;font-size:13px}.nav nav a.hideSm{display:none}}
+/* hero */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line2);
+ background:radial-gradient(1200px 500px at 72% -10%,rgba(74,168,255,.14),transparent 60%),
+            radial-gradient(900px 500px at 20% 120%,rgba(53,224,161,.12),transparent 55%),
+            linear-gradient(180deg,var(--bg),var(--bg2))}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center;
+ padding:62px 20px 56px}
+.eyebrow{font:600 13px/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 14px}
+h1{font-size:clamp(30px,5vw,46px);line-height:1.12;margin:0 0 10px;letter-spacing:-.5px;font-weight:800}
+.affil{color:var(--sub);margin:0 0 20px;font-size:16px}
+.lead{font-size:clamp(18px,2.6vw,22px);line-height:1.5;margin:0 0 26px;color:var(--ink);font-weight:600;
+ max-width:30ch}
+.lead b{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:10px;font-size:15px;font-weight:600;border:1px solid var(--line)}
+.btn.primary{background:linear-gradient(90deg,var(--accent),#2bd6cf);color:#04110c;border-color:transparent}
+.btn.ghost{background:rgba(255,255,255,.03);color:var(--ink)}
+.btn:hover{transform:translateY(-1px)}
+.heroArt{min-width:0}
+@media(max-width:820px){.hero .wrap{grid-template-columns:1fr;padding:44px 20px 40px}
+ .heroArt{order:-1}.lead{max-width:none}}
+/* sections */
+section{padding:56px 0}
+.kicker{font:600 12.5px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent2);margin:0 0 10px}
+h2{font-size:clamp(22px,3.3vw,28px);margin:0 0 6px;letter-spacing:-.3px;font-weight:750}
+.sub{color:var(--sub);margin:0 0 26px}
+.grid{display:grid;gap:16px}
+.cols3{grid-template-columns:repeat(3,1fr)}
+.cols2{grid-template-columns:repeat(2,1fr)}
+@media(max-width:820px){.cols3{grid-template-columns:1fr}.cols2{grid-template-columns:1fr}}
+.card{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid var(--line);
+ border-radius:16px;padding:22px}
+.card h3{margin:0 0 8px;font-size:18px}
+.card .src{color:var(--faint);font-size:13.5px;margin-top:10px}
+.num{font:700 15px/1 var(--mono);color:var(--accent)}
+/* highlight */
+.feature{background:
+ radial-gradient(600px 240px at 90% -20%,rgba(74,168,255,.12),transparent 60%),
+ linear-gradient(180deg,#0e1a16,#0d1620);
+ border:1px solid rgba(53,224,161,.28);border-radius:20px;padding:30px}
+.feature .tag{display:inline-block;font:600 12px/1 var(--mono);letter-spacing:.1em;color:var(--accent);
+ border:1px solid rgba(53,224,161,.4);border-radius:999px;padding:6px 11px;margin-bottom:14px}
+.feature h3{font-size:clamp(20px,3vw,25px);margin:0 0 18px;letter-spacing:-.3px}
+.qa{display:grid;grid-template-columns:120px 1fr;gap:10px 18px}
+.qa dt{color:var(--accent2);font-weight:600;font-size:14.5px}
+.qa dd{margin:0;color:var(--ink)}
+@media(max-width:560px){.qa{grid-template-columns:1fr;gap:2px 0}.qa dt{margin-top:12px}}
+/* research meta chips */
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0 2px}
+.chip{font:600 12.5px/1 var(--mono);color:var(--sub);background:rgba(255,255,255,.045);
+ border:1px solid var(--line2);border-radius:999px;padding:6px 10px}
+.chip.k{color:var(--accent2)}
+.role{font-size:13px;color:var(--faint)}
+/* work */
+.work{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.work .meta{flex:1;min-width:240px}
+.workprev{flex:0 0 300px;max-width:100%;border:1px solid var(--line);border-radius:14px;overflow:hidden;
+ background:#fafaf7}
+.workprev .bar{height:30px;background:#eef0ec;display:flex;align-items:center;gap:6px;padding:0 10px;border-bottom:1px solid #e0e2dd}
+.workprev .dot{width:9px;height:9px;border-radius:50%;background:#cdd2cb}
+.workprev .body{padding:14px 14px 16px;color:#1d1d1b}
+.workprev .big{color:#1f7a4d;font-weight:800;font-size:17px;line-height:1.25}
+.workprev .mini{font-size:12px;color:#6b6b66;margin-top:3px}
+/* contact + footer */
+.callout{color:var(--sub);font-size:14px}
+.ph{color:var(--warm);font-family:var(--mono);font-size:13.5px}
+footer{border-top:1px solid var(--line2);padding:28px 0 46px;color:var(--faint);font-size:13.5px;margin-top:10px}
+footer .note{color:var(--sub)}
+.disc{margin-top:8px;color:var(--faint)}
+</style></head>
+<body>
+
+<header class="nav"><div class="wrap">
+ <div class="brand">이기원 <span>·</span> Giwon Lee</div>
+ <nav>
+  <a href="#skills" class="hideSm">역량</a>
+  <a href="#highlight">대표 연구</a>
+  <a href="#research">연구</a>
+  <a href="#work">작업물</a>
+ </nav>
+</div></header>
+
+<!-- HERO -->
+<div class="hero"><div class="wrap">
+ <div>
+  <p class="eyebrow">Hybrid Rocket Propulsion · Combustion</p>
+  <h1>이기원<span style="color:var(--faint);font-weight:600;font-size:.52em;letter-spacing:0"> Giwon Lee</span></h1>
+  <p class="affil">한국항공대학교 대학원 — 하이브리드 로켓 추진·연소 연구</p>
+  <p class="lead">측정이 막히면, <b>측정하는 방법부터</b> 만들어 내는 연구자.</p>
+  <div class="cta">
+   <a class="btn primary" href="#highlight">대표 연구 보기</a>
+   <a class="btn ghost" href="#work">작업물 보기 →</a>
+  </div>
+ </div>
+ <div class="heroArt">
+  <svg viewBox="0 0 800 420" width="100%" role="img" aria-label="점화·연소 중인 하이브리드 로켓 추력기 일러스트">
+   <defs>
+    <linearGradient id="casing" x1="0" y1="0" x2="0" y2="1">
+     <stop offset="0" stop-color="#2b3a4a"/><stop offset=".5" stop-color="#4a6075"/><stop offset="1" stop-color="#1b2631"/>
+    </linearGradient>
+    <linearGradient id="casing2" x1="0" y1="0" x2="0" y2="1">
+     <stop offset="0" stop-color="#20303d"/><stop offset="1" stop-color="#0f1922"/>
+    </linearGradient>
+    <linearGradient id="nozzle" x1="0" y1="0" x2="0" y2="1">
+     <stop offset="0" stop-color="#5a6f84"/><stop offset=".5" stop-color="#8aa0b6"/><stop offset="1" stop-color="#2d3c4a"/>
+    </linearGradient>
+    <radialGradient id="flameCore" cx="12%" cy="50%" r="90%">
+     <stop offset="0" stop-color="#ffffff"/><stop offset=".25" stop-color="#cdecff"/>
+     <stop offset=".55" stop-color="#5bb4ff"/><stop offset="1" stop-color="#2b6fff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="plume" x1="0" y1="0" x2="1" y2="0">
+     <stop offset="0" stop-color="#bfe9ff"/><stop offset=".35" stop-color="#5aa8ff"/>
+     <stop offset=".7" stop-color="#ff9a3c"/><stop offset="1" stop-color="#ff5e3a" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+     <stop offset="0" stop-color="#35e0a1" stop-opacity=".5"/><stop offset="1" stop-color="#35e0a1" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur1"><feGaussianBlur stdDeviation="6"/></filter>
+    <filter id="blur2"><feGaussianBlur stdDeviation="2"/></filter>
+   </defs>
+
+   <!-- ambient glow -->
+   <ellipse cx="560" cy="210" rx="260" ry="120" fill="url(#glow)" opacity=".6"/>
+
+   <!-- mounting ring / injector dome (left) -->
+   <rect x="92" y="150" width="26" height="120" rx="8" fill="#38485a"/>
+   <path d="M118 150 q-34 60 0 120 z" fill="url(#casing2)"/>
+   <!-- oxidizer feed line -->
+   <rect x="40" y="200" width="60" height="20" rx="6" fill="#30404f"/>
+   <circle cx="48" cy="210" r="12" fill="#26333f" stroke="#43566a" stroke-width="2"/>
+   <text x="48" y="248" font-family="ui-monospace,monospace" font-size="11" fill="#67788c" text-anchor="middle">GOX</text>
+
+   <!-- main casing / combustion chamber -->
+   <rect x="118" y="150" width="300" height="120" rx="16" fill="url(#casing)"/>
+   <rect x="118" y="150" width="300" height="120" rx="16" fill="none" stroke="rgba(255,255,255,.12)"/>
+   <!-- casing ribs -->
+   <g stroke="rgba(255,255,255,.10)" stroke-width="2">
+    <line x1="170" y1="152" x2="170" y2="268"/><line x1="230" y1="152" x2="230" y2="268"/>
+    <line x1="290" y1="152" x2="290" y2="268"/><line x1="350" y1="152" x2="350" y2="268"/>
+   </g>
+   <!-- fuel grain (inside, warm) -->
+   <rect x="150" y="186" width="250" height="48" rx="10" fill="#1a232d"/>
+   <rect x="150" y="196" width="250" height="28" rx="8" fill="#3a2a1e"/>
+   <rect x="150" y="202" width="250" height="16" rx="6" fill="#d8731f" opacity=".85" filter="url(#blur2)"/>
+
+   <!-- converging-diverging nozzle -->
+   <path d="M418 158 L470 196 L470 224 L418 262 Z" fill="url(#nozzle)"/>
+   <path d="M470 196 L556 150 L556 270 L470 224 Z" fill="url(#nozzle)"/>
+   <path d="M470 196 L556 150 L556 270 L470 224 Z" fill="none" stroke="rgba(255,255,255,.14)"/>
+   <!-- throat highlight -->
+   <rect x="466" y="196" width="6" height="28" fill="#dfe9f2" opacity=".5"/>
+
+   <!-- EXHAUST PLUME (animated) -->
+   <g class="plume">
+    <path d="M556 168 C640 182,720 196,800 210 C720 224,640 238,556 252 Z" fill="url(#plume)" filter="url(#blur1)" opacity=".9"/>
+    <path d="M556 182 C628 194,700 202,790 210 C700 218,628 226,556 238 Z" fill="url(#flameCore)"/>
+    <!-- shock (mach) diamonds -->
+    <g fill="#ffffff" opacity=".9" filter="url(#blur2)">
+     <ellipse cx="600" cy="210" rx="10" ry="15"/>
+     <ellipse cx="648" cy="210" rx="8" ry="11"/>
+     <ellipse cx="690" cy="210" rx="6" ry="8"/>
+     <ellipse cx="726" cy="210" rx="4" ry="5.5"/>
+    </g>
+   </g>
+
+   <!-- subtle labels -->
+   <g font-family="ui-monospace,monospace" font-size="11" fill="#7d8ea1">
+    <text x="150" y="300">injector</text>
+    <text x="262" y="300" text-anchor="middle">combustion chamber</text>
+    <text x="512" y="300" text-anchor="middle">nozzle</text>
+    <text x="690" y="300" text-anchor="middle" fill="#9fb6cf">exhaust plume</text>
+   </g>
+  </svg>
+ </div>
+</div></div>
+
+<!-- SKILLS -->
+<section id="skills"><div class="wrap">
+ <p class="kicker">What I can do</p>
+ <h2>할 수 있는 일 세 가지</h2>
+ <p class="sub">여러 연구에 되풀이되는 역량입니다.</p>
+ <div class="grid cols3">
+  <div class="card"><h3>연소 실험 설계·수행</h3>
+   <p class="sub" style="margin:0">하이브리드 연소기와 연료 시편을 직접 설계하고 연소 실험을 운용합니다.</p>
+   <p class="src">근거 · 경험 1·2·3 (VFP 연소기, 파라핀 가시화, 경화 실험)</p></div>
+  <div class="card"><h3>영상·신호 계측 분석</h3>
+   <p class="sub" style="margin:0">연소 영상과 광·전기 신호에서 필요한 값을 뽑아냅니다.</p>
+   <p class="src">근거 · 경험 2·4 (화염 위치 추출, PD/PMT 신호 처리)</p></div>
+  <div class="card"><h3>이론·모델과 비교 해석</h3>
+   <p class="sub" style="margin:0">실험 결과를 예측 모델·열전달 해석과 맞춰 해석합니다.</p>
+   <p class="src">근거 · 경험 1·3 (O/F 예측 모델, 2D 과도열전달)</p></div>
+ </div>
+</div></section>
+
+<!-- HIGHLIGHT -->
+<section id="highlight" style="padding-top:8px"><div class="wrap">
+ <p class="kicker">Featured research</p>
+ <h2>대표 연구</h2>
+ <p class="sub">"측정이 막히면 방법을 만든다"를 가장 잘 보여 주는 연구입니다.</p>
+ <div class="feature">
+  <span class="tag">KSPE 2026 추계 · 한화에어로스페이스 산학 · 제1저자</span>
+  <h3>산업용 과산화수소 기반 접촉점화 추진제의 점화시점 측정 기법</h3>
+  <dl class="qa">
+   <dt>연구 질문</dt><dd>산업용 과산화수소 접촉점화 추진제의 점화지연시간을, 신호 크기에 의존하지 않고 자동으로 정확히 잴 수 있을까?</dd>
+   <dt>내가 한 일</dt><dd>액적낙하 시험에서 PD로 접촉시점을 재고, PMT 신호를 광학 필터(OH*, CH*)별로 얻어 그 로그 미분의 peak로 점화시점을 판별하는 알고리즘을 구축.</dd>
+   <dt>알아낸 것</dt><dd>고속카메라 영상으로 얻은 점화지연시간을 기준으로 평가했을 때, <b style="color:var(--accent)">CH* 필터가 OH* 필터보다 상대오차가 낮아 더 정확</b>했다.</dd>
+   <dt>다음 할 것</dt><dd>외부 광원 간섭을 줄인 환경에서 알고리즘을 다시 평가하고, 더 다양한 연료에 적용.</dd>
+  </dl>
+ </div>
+</div></section>
+
+<!-- RESEARCH LIST -->
+<section id="research"><div class="wrap">
+ <p class="kicker">Research</p>
+ <h2>연구 목록</h2>
+ <p class="sub">모두 제1저자 · 학회 발표 논문. 아래는 서지 요약입니다.</p>
+ <div class="grid cols2">
+  <div class="card">
+   <h3>VFP 하이브리드 연소기의 O/F Shift</h3>
+   <div class="role">KSAA 2026 1차 학술대회 · 제1저자</div>
+   <div class="chips"><span class="chip k">연소 5·10·20 s</span><span class="chip">GOX 11 g/s · 30 bar</span></div>
+   <p class="sub" style="margin:10px 0 0">연소실 압력은 일정했으나 시간평균 O/F 비는 예측 모델과 반대로 감소 → 장기 연소 중 열축적에 의한 후퇴율 증가로 해석.</p>
+  </div>
+  <div class="card">
+   <h3>파라핀 혼합연료 연소 가시화·화염 위치</h3>
+   <div class="role">KSAA 2025 1차 학술대회 · 제1저자</div>
+   <div class="chips"><span class="chip k">LDPE 0/5/10 wt%</span><span class="chip">12회 시험</span><span class="chip">화염 0.48–1.76 mm</span></div>
+   <p class="sub" style="margin:10px 0 0">Color·CH* 영상 분석으로 화염 위치를 추출. 평균 산화제 질량유속이 커질수록 화염 위치가 상승.</p>
+  </div>
+  <div class="card">
+   <h3>알루미늄 함유량별 파라핀 연료 경화특성</h3>
+   <div class="role">KSAA 2025 2차 학술대회 · 제1저자</div>
+   <div class="chips"><span class="chip k">Al 10/15/20 wt%</span><span class="chip">90 → 40/50/60 ℃</span></div>
+   <p class="sub" style="margin:10px 0 0">2D 과도열전달로 경화 거동 해석. 알루미늄 함유량이 늘수록 경화시간 단축(열확산도 증가).</p>
+  </div>
+  <div class="card">
+   <h3>과산화수소 접촉점화 추진제 점화시점 측정</h3>
+   <div class="role">KSPE 2026 추계학술대회 · 제1저자 · 산학협력</div>
+   <div class="chips"><span class="chip k">PD + PMT</span><span class="chip">OH* / CH*</span><span class="chip">로그미분 peak</span></div>
+   <p class="sub" style="margin:10px 0 0">신호 크기에 의존하지 않는 자동 점화시점 측정 알고리즘. CH* 필터가 OH*보다 정확. (↑ 대표 연구)</p>
+  </div>
+ </div>
+</div></section>
+
+<!-- WORK -->
+<section id="work"><div class="wrap">
+ <p class="kicker">Work sample</p>
+ <h2>작업물</h2>
+ <p class="sub">예보 데이터로 야외 실험 가능 시간을 찾아 주는 인터랙티브 대시보드입니다.</p>
+ <div class="feature work">
+  <div class="meta">
+   <h3 style="margin:0 0 8px">야외 실험 가능 시간 대시보드</h3>
+   <p class="sub" style="margin:0 0 14px">Open-Meteo 예보(풍속·돌풍·강수)를 받아, 내 기준에 맞는 가장 긴 연속 시간대·7일 그래프·첫날 표를 보여 줍니다. 키·서버 없이 브라우저에서 바로 동작.</p>
+   <div class="chips" style="margin-bottom:16px"><span class="chip k">HTML 단일 파일</span><span class="chip">인터랙티브 SVG</span><span class="chip">기준 슬라이더</span></div>
+   <a class="btn primary" href="dashboard.html">대시보드 열기 →</a>
+  </div>
+  <a class="workprev" href="dashboard.html" aria-label="대시보드 미리보기">
+   <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+   <div class="body">
+    <div class="mini">가장 긴 연속 가능 시간대</div>
+    <div class="big">11/7(토) 18시부터 78시간</div>
+    <div class="mini">풍속 &lt;10 · 돌풍 &lt;20 km/h · 비 없음</div>
+   </div>
+  </a>
+ </div>
+ <p class="callout" style="margin-top:18px">· 연구 근거는 위 <a href="#research">연구 목록</a>의 학회 발표 논문입니다(제목·학회·연도로 인용).</p>
+</div></section>
+
+<!-- TEACHING + CONTACT -->
+<section style="padding-top:8px"><div class="wrap">
+ <div class="grid cols2">
+  <div class="card"><h3>교육 · 멘토링</h3>
+   <p class="sub" style="margin:0">수업 조교(TA)와 학부생·후배 멘토링 경험이 있습니다.</p></div>
+  <div class="card"><h3>연락</h3>
+   <p class="sub" style="margin:0 0 6px">연구·협업·채용 문의를 환영합니다.</p>
+   <p class="ph">your-email@example.com &nbsp;← 여기에 본인 이메일을 넣으세요</p></div>
+ </div>
+</div></section>
+
+<footer><div class="wrap">
+ <div class="note">© 이기원 (Giwon Lee) · 한국항공대학교 대학원 — 하이브리드 로켓 추진·연소</div>
+ <div class="disc">이 페이지는 Claude Code와 함께 만들었고 내용은 본인이 확인했습니다.</div>
+</div></footer>
+
+<style>
+@keyframes plumePulse{0%,100%{opacity:.92;transform:scaleX(1)}50%{opacity:1;transform:scaleX(1.03)}}
+.plume{transform-origin:556px 210px;animation:plumePulse 1.6s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){.plume{animation:none}}
+</style>
+</body></html>
